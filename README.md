@@ -2,5 +2,3 @@
 
 ![Logo do Samba](img/samba.png)
 
-#Teste -am
-#Teste -m
