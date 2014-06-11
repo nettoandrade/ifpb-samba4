@@ -7,9 +7,11 @@ form#f-form{
 	border-radius: 5px;
 	background-image: linear-gradient(45deg, white, black);
 	border: 1px solid black;
+	margin-left: 240px;
+	box-shadow: 4px 4px 8px black;
 	position: fixed;
 	padding: 1%;
-	margin-top: 4%;
+	margin-top: 140px;
 	width: center;
 }
 header{

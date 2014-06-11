@@ -61,6 +61,7 @@
 		</ul>
 	</li>
 	<li><a href="/ifpb-samba4/logout.php" title="">Logout</a></li>
+	<li><a href="#" id="logs" title="">Logs de Acesso</a></li>
 </ul>
 </div>
 <div id="main">
@@ -81,6 +82,7 @@
 	$('#glist').click(function(){window.location='index.php?page=glist'});
 	$('#gcreate').click(function(){window.location='index.php?page=gcreate'});
 	$('#gremove').click(function(){window.location='index.php?page=gremove'});
+	$('#logs').click(function(){window.location='index.php?page=logs'});
 	</script>
 </body>
 </html>
