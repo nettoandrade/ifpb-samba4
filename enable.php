@@ -9,7 +9,7 @@ include 'connection.php';
 <input type="reset" value="Limpar">
 </form>
 <h2>Usuarios: </h2>
-<?php 
+<?
 $output = ssh2_exec($connection, '/usr/local/samba/bin/samba-tool user list');
 stream_set_blocking($output, true);
 $cmd = stream_get_contents($output);
