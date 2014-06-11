@@ -1,12 +1,14 @@
 <?
  include 'check.php';
  include 'connection.php';
+ $page = (isset($_GET['page']))?$_GET['page'].".php":"status.html";
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>Samba 4</title>
 	<link rel="stylesheet" href="css/estilo.css">
 	<script language="JavaScript" src="js/jquery-1.3.2.js" type="text/javascript"></script>
   	<script language="JavaScript" type="text/javascript">
@@ -36,19 +38,18 @@
 	<li class="parent"><a href="#" title="">Usuários</a>
 		<ul class="sub-menu">
 			<li><a href="#add" id="add">Adicionar</a></li>	
-			<li><a href="#">Remover</a></li>
+			<li><a href="#remove" id="remove">Remover</a></li>
 			<li><a href="#list" id="list">Listar</a></li>
-			<li><a href="#">Desabilitar</a></li>
-			<li><a href="#">Habilitar</a></li>
-			<li><a href="#">Alterar senha</a></li>
+			<li><a href="#disable" id="disable">Desabilitar</a></li>
+			<li><a href="#enable" id="enable">Habilitar</a></li>
+			<li><a href="#setpwd" id="setpwd">Alterar senha</a></li>
 		</ul>
 	</li>
 	<li class="parent"><a href="#" title="">Grupos</a>
 		<ul class="sub-menu">
-			<li><a href="#">Adicionar</a></li>	
-			<li><a href="#">Remover</a></li>
-			<li><a href="#">Listar</a></li>
-			<li><a href="#">Permissões</a></li>
+			<li><a href="#gcreate" id="gcreate">Adicionar</a></li>	
+			<li><a href="#gremove" id="gremove">Remover</a></li>
+			<li><a href="#glist" id="glist">Listar</a></li>
 		</ul>
 	</li>
 	<li class="parent"><a href="#" title="">Compartilhamentos</a>
@@ -63,42 +64,23 @@
 </ul>
 </div>
 <div id="main">
-	<h4>DOMÍNIO: </h4>
-	<p><?php 
-	$output = shell_exec("cat /usr/local/samba/etc/smb.conf | grep realm | cut -d = -f 2");
-	echo "$output";
-	?></p>
-	<hr>
-	<h4>STATUS:</h4>
-	<p><?php
-	$output = shell_exec("ps aux | grep samba | wc -l");
-	if ($output > 2) {
-		echo "OK";
-	}
-	else {
-		echo "Fail";
-	}
-	?></p><br>
-	<h4>COMPARTILHAMENTOS: </h4><br>
-	<p>Compartilhamento</p><br>
-	<p>Arquivos</p><br>
-	<p>Temporário</p>
-
+	<? include_once $page ?>
 </div>
-	<script type="text/javascript">
-	var add = '<form action="processo.php" method="POST"><h4>Nome: </h4><input type="text" name="name"><br><h4>Senha: </h4><input type="password" name="password"><br><input type="submit" value="Enviar"><input type="reset" value="Limpar"></form>';
-	var list = '<?php $output = shell_exec("/usr/local/samba/bin/samba-tool user list");$output = str_replace("\n", "<br>", $output);echo $output;?>';
-
-	document.querySelector('#list').onclick = function(){
-		setOutputMain(list);
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script>
+	if($('#status').html() == "OK") {
+		$('#iniciar').hide();
 	};
-	document.querySelector('#add').onclick = function(){
-		setOutputMain(add);
-	};
-	
-	function setOutputMain(value){
-		 document.querySelector('#main').innerHTML = value;
-	};
+	$('#iniciar').click(function(){window.location='index.php?page=iniciar'});
+	$('#add').click(function(){window.location='index.php?page=create'});
+	$('#list').click(function(){window.location='index.php?page=list'});
+	$('#remove').click(function(){window.location='index.php?page=remove'});
+	$('#disable').click(function(){window.location='index.php?page=disable'});
+	$('#enable').click(function(){window.location='index.php?page=enable'});	
+	$('#setpwd').click(function(){window.location='index.php?page=setpwd'});
+	$('#glist').click(function(){window.location='index.php?page=glist'});
+	$('#gcreate').click(function(){window.location='index.php?page=gcreate'});
+	$('#gremove').click(function(){window.location='index.php?page=gremove'});
 	</script>
 </body>
 </html>
