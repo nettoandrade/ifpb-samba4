@@ -2,5 +2,5 @@
 
 ![Logo do Samba](img2/samba.png)
 
-h2. Dependencias
+##Dependencias
 
