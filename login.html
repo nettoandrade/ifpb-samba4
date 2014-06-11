@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Login - Samba 4</title>
+	<link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+<header>
+<h1>SAMBA 4</h1>
+<h4>Controlador de dominio</h4>
+</header>
+<div id="f-login">
+	<form action="login.php" method="post">
+		<label>Usuario<input type="text" name="login" id="login" placeholder="Login"></label>
+		<label>Senha<input type="password" name="senha" id="senha" placeholder="Senha"></label>
+		<label>Porta SSH<input type="text" name="port" id="port" placeholder="Porta SSH"></label>
+		<input type="submit" value="Entrar">
+	</form>
+</div>
+</body>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script>
+	$('#port').val('22');
+</script>
+</html>

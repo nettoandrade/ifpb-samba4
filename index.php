@@ -1,3 +1,7 @@
+<?
+ include 'check.php';
+ include 'connection.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,7 +32,7 @@
 <div id="menu1">
 	<ul id="menu">
 	<li class="header">MENU</li>
-	<li><a href="/samba4" title="">Status</a></li>
+	<li><a href="/ifpb-samba4" title="">Status</a></li>
 	<li class="parent"><a href="#" title="">Usuários</a>
 		<ul class="sub-menu">
 			<li><a href="#add" id="add">Adicionar</a></li>	
@@ -55,6 +59,7 @@
 			<li><a href="#">Permissões</a></li>
 		</ul>
 	</li>
+	<li><a href="/ifpb-samba4/logout.php" title="">Logout</a></li>
 </ul>
 </div>
 <div id="main">
