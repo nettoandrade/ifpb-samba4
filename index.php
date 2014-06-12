@@ -1,7 +1,7 @@
 <?
  include 'check.php';
  include 'connection.php';
- $page = (isset($_GET['page']))?$_GET['page'].".php":"status.html";
+ $page = (isset($_GET['page']))?$_GET['page'].".php":"status.php";
 
 ?>
 <!DOCTYPE html>
@@ -34,7 +34,7 @@
 <div id="menu1">
 	<ul id="menu">
 	<li class="header">MENU</li>
-	<li><a href="/ifpb-samba4" title="">Status</a></li>
+	<li><a href="/ifpb-samba4/index.php" title="">Status</a></li>
 	<li class="parent"><a href="#" title="">Usuários</a>
 		<ul class="sub-menu">
 			<li><a href="#add" id="add">Adicionar</a></li>	
@@ -62,17 +62,22 @@
 	</li>
 	<li><a href="/ifpb-samba4/logout.php" title="">Logout</a></li>
 	<li><a href="#" id="logs" title="">Logs de Acesso</a></li>
-</ul>
+	</ul>
 </div>
-<div id="main">
+<div id="scroll">
 	<? include_once $page ?>
 </div>
 	<script src="js/jquery-1.11.1.min.js"></script>
 	<script>
-	if($('#status').html() == "OK") {
+	
+	if($('#status').html() == "OK")
 		$('#iniciar').hide();
-	};
+	else{
+		$('#processes').hide();
+		$('#stop').hide();
+	}
 	$('#iniciar').click(function(){window.location='index.php?page=iniciar'});
+	$('#stop').click(function(){window.location='index.php?page=iniciar&flag=1'});
 	$('#add').click(function(){window.location='index.php?page=create'});
 	$('#list').click(function(){window.location='index.php?page=list'});
 	$('#remove').click(function(){window.location='index.php?page=remove'});

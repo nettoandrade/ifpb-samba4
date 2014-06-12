@@ -19,11 +19,14 @@ include 'connection.php';
 		echo "Fail";
 	}
 	?></p>
-	<button id="iniciar">Iniciar</button><br>
-<?
-$output = ssh2_exec($connection, '/usr/local/samba/bin/samba-tool processes');
-stream_set_blocking($output, true);
-$cmd = stream_get_contents($output);
-$cmd =str_replace("\n", "<br>", $cmd);
-echo $cmd;
-?>
+	<button id="iniciar">Iniciar</button>
+	<button id="stop">Stop</button><br>
+	<div id="processes">
+	<?
+	$output = ssh2_exec($connection, '/usr/local/samba/bin/samba-tool processes');
+	stream_set_blocking($output, true);
+	$cmd = stream_get_contents($output);
+	$cmd = str_replace("\n", "<br>", $cmd);
+	echo $cmd;
+	?>
+	</div>

@@ -1,7 +1,23 @@
+#scroll{
+	overflow: auto;
+	position: fixed;
+	display: inline-block;
+	color: black;
+	border: 1px solid black;
+	padding: 1%;
+	margin-left: 45px;
+	margin-top: 20px;
+	box-shadow: 1px 1px 3px black;
+	text-align: left;	
+	width: 900px;
+	height: 450px;
+	border-radius: 10px;
+}
+
 div#f-login{
 	height:70px;
-	margin-top:25px;
-	margin-left:10px;
+	margin-top:100px;
+	margin-left:-100px;
 }
 form#f-form{
 	border-radius: 5px;
@@ -34,21 +50,6 @@ header h4{
 
 div#menu1{
 	display: inline-block;
-}
-
-div#main{
-	position: fixed;
-	display: inline-block;
-	color: black;
-	border: 1px solid black;
-	padding: 1%;
-	margin-left: 50px;
-	margin-top: 20px;
-	box-shadow: 1px 1px 3px black;
-	text-align: left;	
-	width: 990px;
-	height: 450px;
-	border-radius: 10px;
 }
 
 ul{
@@ -106,13 +107,13 @@ ul#menu li ul.sub-menu li a {
 	color: #2F4F4F;
 }
 
-div#main h4{
+div#scroll h4{
 		color: black;
 		display: inline-block;
 }
 
-div#main p{
+div#scroll p{
 	color: green;
 	display: inline-block;
+	text-align: center;
 }
-
