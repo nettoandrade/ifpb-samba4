@@ -1,0 +1,11 @@
+http://www.vivaolinux.com.br/artigos/impressora.php?codigo=14060
+
+Tutorial que testamos e está funcionando.
+
+parte 1:
+http://www.mundotibrasil.com.br/samba-4-compilar-instalar-e-provisionar/
+parte 2:
+http://www.mundotibrasil.com.br/ingressar-windows-7-no-dominio-samba-4/
+
+
+
