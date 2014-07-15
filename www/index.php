@@ -31,9 +31,9 @@
 	<li><a href="/samba4" title="">Status</a></li>
 	<li class="parent"><a href="#" title="">Usuários</a>
 		<ul class="sub-menu">
-			<li><a href="adicionar.html">Adicionar</a></li>	
+			<li><a href="#add" id="add">Adicionar</a></li>	
 			<li><a href="#">Remover</a></li>
-			<li><a href="listar.php">Listar</a></li>
+			<li><a href="#list" id="list">Listar</a></li>
 			<li><a href="#">Desabilitar</a></li>
 			<li><a href="#">Habilitar</a></li>
 			<li><a href="#">Alterar senha</a></li>
@@ -80,5 +80,20 @@
 	<p>Temporário</p>
 
 </div>
+	<script type="text/javascript">
+	var add = '<form action="processo.php" method="POST"><h4>Nome: </h4><input type="text" name="name"><br><h4>Senha: </h4><input type="password" name="password"><br><input type="submit" value="Enviar"><input type="reset" value="Limpar"></form>';
+	var list = '<?php $output = shell_exec("/usr/local/samba/bin/samba-tool user list");$output = str_replace("\n", "<br>", $output);echo $output;?>';
+
+	document.querySelector('#list').onclick = function(){
+		setOutputMain(list);
+	};
+	document.querySelector('#add').onclick = function(){
+		setOutputMain(add);
+	};
+	
+	function setOutputMain(value){
+		 document.querySelector('#main').innerHTML = value;
+	};
+	</script>
 </body>
 </html>
