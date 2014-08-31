@@ -4,5 +4,13 @@ h1. Gerenciador Web para Samba 4
 
 h2. Dependencias
 
+openssh-server , libssh2-php, LAMP
 
+@apt-get install apache2 && php5 && mysql-server@
+
+@apt-get install openssh-server libssh2-php@
+
+Lembre-se de alterar o usuario e senha do banco de dados Mysql no arquivo connectiondb.php
+
+Logo Após acesse no Browser o install.php
 
