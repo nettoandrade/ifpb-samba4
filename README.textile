@@ -1,4 +1,4 @@
-# Gerenciador Web para Samba 4
+h1. Gerenciador Web para Samba 4
 
 !img2/samba.png!
 
