@@ -2,7 +2,11 @@ h1. Gerenciador Web para Samba 4
 
 !img2/samba.png!
 
-h2. Dependencias
+h2. Install
+
+1. Clone o Repositorio
+
+@
 
 openssh-server , libssh2-php, LAMP
 
