@@ -2,17 +2,21 @@ h1. Gerenciador Web para Samba 4
 
 !img2/samba.png!
 
-h2. Install
+h2. Manual Install
 
 1. Clone o Repositorio
 
-@
+@https://github.com/nettoandrade/ifpb-samba4.git@
 
-openssh-server , libssh2-php, LAMP
+2. Instando *Dependencias*
+
+*openssh-server* , *libssh2-php*, *LAMP*
 
 bq. @apt-get install apache2 && php5 && mysql-server@
 
 bq. @apt-get install openssh-server libssh2-php@
+
+3. Executando scripts de configuração
 
 Lembre-se de alterar o usuario e senha do banco de dados Mysql no arquivo connectiondb.php
 
