@@ -1,3 +1,7 @@
+*{
+	font-family: 'Droid Serif', serif;
+}
+
 #scroll{
 	overflow: auto;
 	position: fixed;

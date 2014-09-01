@@ -10,6 +10,7 @@
 	<meta charset="UTF-8">
 	<title>Samba 4</title>
 	<link rel="stylesheet" href="css/estilo.css">
+	<link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
 	<script language="JavaScript" src="js/jquery-1.3.2.js" type="text/javascript"></script>
   	<script language="JavaScript" type="text/javascript">
   	$(function() {
