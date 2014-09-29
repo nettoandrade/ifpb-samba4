@@ -31,12 +31,12 @@ extract($_POST);
 			break;
 
 		case 'gcreate':
-			 	ssh2_exec($connection, '/usr/local/samba/bin/samba-tool user create '.$group.' '.$password);
+			 	ssh2_exec($connection, '/usr/local/samba/bin/samba-tool group add '.$group.' '.$password);
 				header('Location:index.php?page=glist');
 			break;
 
 		case 'gremove':
-			 	ssh2_exec($connection, '/usr/local/samba/bin/samba-tool user delete '.$group);
+			 	ssh2_exec($connection, '/usr/local/samba/bin/samba-tool group delete '.$group);
 				header('Location:index.php?page=glist');
 			break;
 	}
