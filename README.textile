@@ -12,7 +12,7 @@ h2. Manual Install
 
 *openssh-server* , *libssh2-php*, *LAMP*
 
-bq. @apt-get install apache2 && php5 && mysql-server@
+bq. @apt-get install apache2  php5  mysql-server php5-mysql@
 
 bq. @apt-get install openssh-server libssh2-php@
 
@@ -22,5 +22,5 @@ Lembre-se de Reiniciar o Apache logo em seguida
 
 Lembre-se de alterar o usuario e senha do banco de dados Mysql no arquivo connectiondb.php
 
-Logo Após acesse no Browser o install.php
+Logo Após acesse no Browser o http://IpDaMaquina/ifpb-samba4/install.php
 
