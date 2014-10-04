@@ -8,30 +8,39 @@ stream_set_blocking($output, true);
 $cmd = stream_get_contents($output);
 $cmd = explode("\n", $cmd);
 
-//Lista os usuarios 
-$output2 = ssh2_exec($connection, '/usr/local/samba/bin/samba-tool user list');
-stream_set_blocking($output2, true);
-$cmd2 = stream_get_contents($output2);
-$cmd2 = explode("\n", $cmd2);
-
 ?>
 
-<form action="processo.php?page=grmember" method="POST">
-
+<form action="index.php?page=grmember" method="post">
+	
 	<h4>Grupos</h4>
 		<select style="font-size: 16px;" name="group">
 			<?foreach ($cmd as $value) {?>
 			<option><?=$value?></option>
 			<?}?>
 	</select><br>
+	<input type="submit" value="Listar">
 
-	<h4>Usuário</h4>
+</form>
+
+<?php
+
+$removerGrupo = $_POST['group'];
+$output2 = ssh2_exec($connection, '/usr/local/samba/bin/samba-tool group listmembers '.$removerGrupo);
+stream_set_blocking($output2, true);
+$cmd2 = stream_get_contents($output2);
+$cmd2 = explode("\n", $cmd2);
+
+?>
+
+<form action="processo.php?page=grmember" method="post">
+	
+	<h4>Membros</h4>
 		<select style="font-size: 16px;" name="name">
-		<?foreach ($cmd2 as $value2) {?>
-		<option><?=$value2?></option>
-		<?}?>
+			<?foreach ($cmd2 as $value) {?>
+			<option><?=$value?></option>
+			<?}?>
 	</select><br>
-	<input type="submit" value=Remover>
 
+	<input type="submit" value="Remover">
 </form>
 
