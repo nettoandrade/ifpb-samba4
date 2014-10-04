@@ -1,6 +1,6 @@
 <?
-include 'check.php';
-include 'connection.php';
+include 'sessao/check.php';
+include 'sessao/connection.php';
 extract($_GET);
 extract($_POST);
 
@@ -22,7 +22,7 @@ extract($_POST);
 
 		case 'enable':
 			 	ssh2_exec($connection, '/usr/local/samba/bin/samba-tool user enable '.$name);
-				header('Location:index.php?page=list');
+				header('Location:ndex.php?page=list');
 			break;
 
 		case 'setpwd':
@@ -31,7 +31,7 @@ extract($_POST);
 			break;
 
 		case 'gcreate':
-			 	ssh2_exec($connection, '/usr/local/samba/bin/samba-tool group add '.$group.' '.$password);
+			 	ssh2_exec($connection, '/usr/local/samba/bin/samba-tool group add '.$group);
 				header('Location:index.php?page=glist');
 			break;
 
@@ -39,9 +39,19 @@ extract($_POST);
 			 	ssh2_exec($connection, '/usr/local/samba/bin/samba-tool group delete '.$group);
 				header('Location:index.php?page=glist');
 			break;
+
+		case 'gmember':
+				ssh2_exec($connection, '/usr/local/samba/bin/samba-tool group addmembers '.$group.' '.$name);
+				header('Location:index.php?page=glmember');
+				break;
+
+		case 'grmember':
+				ssh2_exec($connection, '/usr/local/samba/bin/samba-tool group removemembers'.$group.' '.$name);
+				header('Location:index.php?page=glmember');
+				break;
+		
 	}
 
 
-	
 
 ?>

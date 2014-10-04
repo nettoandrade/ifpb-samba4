@@ -9,51 +9,20 @@
 	color: black;
 	border: 1px solid black;
 	padding: 1%;
-	margin-left: 45px;
 	margin-top: 20px;
 	box-shadow: 1px 1px 3px black;
 	text-align: left;	
 	width: 900px;
 	height: 450px;
 	border-radius: 10px;
+	background-color: white;
 }
 
-div#f-login{
-	height:70px;
-	margin-top:100px;
-	margin-left:-100px;
-}
-form#f-form{
-	border-radius: 5px;
-	background-image: linear-gradient(45deg, white, black);
-	border: 1px solid black;
-	margin-left: 240px;
-	box-shadow: 4px 4px 8px black;
-	position: fixed;
-	padding: 1%;
-	margin-top: 140px;
-	width: center;
-}
-header{
-	background-image: linear-gradient(45deg, white, black);
-	padding: 1%;
-	margin-bottom: 10px;
-	border-radius: 10px;
-}
-
-header h1{
-	display: inline-block;
-	font-size: 40px;
-	text-shadow: 2px 2px 4px black;
-
-}
-header h4{
-	display: inline-block;
-	font-size: 15px;
-}
 
 div#menu1{
 	display: inline-block;
+	border: none;
+
 }
 
 ul{
@@ -61,10 +30,11 @@ ul{
 }
 
 ul#menu{
-	width: 190px;
-	border: 1px solid silver;
+	width: 250px;
+	margin-left: -16%;
 	margin-top: 20px;
 	border-radius: 10px;
+	font-size: 17px;
 }
 
 ul#menu li{
@@ -72,13 +42,14 @@ ul#menu li{
 	line-height: 19px;
 	background: #F4F4F4;
 	border-radius: 10px; 
+	background-color: white;
 }
 
 ul#menu li.header{
-	background: #DFDFDF;
 	font-weight: bolder; 
 	padding: 0px 3px;
-	font-size: 16px;
+	font-size: 19px;
+	background-color: #9FB6CD;
 
 }
 

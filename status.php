@@ -1,6 +1,6 @@
 <?php 
-include 'check.php';
-include 'connection.php';
+include 'sessao/check.php';
+include 'sessao/connection.php';
 ?>
 <h4>DOMÍNIO: </h4>
 	<p><?php 

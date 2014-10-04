@@ -1,6 +1,6 @@
 <?php 
-include 'check.php';
-include 'connection.php';
+include 'sessao/check.php';
+include 'sessao/connection.php';
 
 $output = ssh2_exec($connection, '/usr/local/samba/bin/samba-tool group list');
 stream_set_blocking($output, true);

@@ -1,7 +1,7 @@
 <?
 	function getDBConnection($dbname = "samba4"){
 		$user = "root";
-		$password = "ant2011@x";
+		$password = "root";
 		$db = "mysql";
 		$host = "localhost";
 		$dsn = ($dbname=="samba4")?"$db:dbname=$dbname;host=$host":"$db:host=$host";
@@ -13,5 +13,4 @@
 		
 		
 	}
-
 ?>

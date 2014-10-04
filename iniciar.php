@@ -1,6 +1,6 @@
 <?
-	include 'check.php';
-	include 'connection.php';
+	include 'sessao/check.php';
+	include 'sessao/connection.php';
 	extract($_GET);
 	if (isset($flag)) 
 		ssh2_exec($connection, 'killall samba');	

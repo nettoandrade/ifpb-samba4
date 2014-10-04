@@ -1,5 +1,5 @@
 <?
-	include 'check.php';
+	include 'sessao/check.php';
 	require_once "gerenciamentodb.php";
 
 	$logs = read();

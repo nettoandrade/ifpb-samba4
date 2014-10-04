@@ -1,0 +1,71 @@
+div#logo{
+
+	background-color: black;
+	margin-left: -0.6%;
+	margin-right: -0.7%;
+	margin-top: -0.6%;
+	padding: 2%;
+}
+
+header#login{
+	background-image: linear-gradient(45deg, white, black);
+	padding: 1%;
+	margin-left: -2.5%;
+	margin-right: -2%;
+	margin-top: -1%;
+	margin-bottom: -0.7%;
+}
+
+header h1{
+	display: inline-block;
+	font-size: 40px;
+	text-shadow: 2px 2px 4px black;
+
+}
+header h4{
+	display: inline-block;
+	font-size: 15px;
+}
+
+header#index{
+	background-image: linear-gradient(45deg, white, black);
+	padding: 1%;
+	margin-left: -2.5%;
+	margin-right: -2%;
+	margin-top: -1%;
+	margin-bottom: -1%;
+
+
+}
+
+div#f-login{
+	margin-top: 22%;
+	margin-left: 33%;
+	width: 500px;
+	height:300px;
+
+}
+
+input#login{
+	margin-left: 5%;
+	font-size: 19px;
+}
+
+input#senha{
+	margin-left: 8%;
+	font-size: 19px;
+}
+
+input#port{
+	margin-left: 1%;
+	font-size: 19px;
+}
+
+input#botao{
+	margin-left: 49%;
+	font-size: 15px;
+}
+
+label#llogin{
+	font-size: 20px;
+}

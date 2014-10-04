@@ -1,6 +1,6 @@
 <?php 
-include 'check.php';
-include 'connection.php';
+include 'sessao/check.php';
+include 'sessao/connection.php';
 ?>
 <form action="processo.php?page=remove" method="POST">
 <h4>Nome: </h4>

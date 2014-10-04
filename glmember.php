@@ -2,7 +2,7 @@
 include 'sessao/check.php';
 include 'sessao/connection.php';
 
-$output = ssh2_exec($connection, '/usr/local/samba/bin/samba-tool user list');
+$output = ssh2_exec($connection, '/usr/local/samba/bin/samba-tool group listmembers redes');
 stream_set_blocking($output, true);
 $cmd = stream_get_contents($output);
 $cmd = explode("\n", $cmd);
@@ -10,7 +10,7 @@ $cmd = explode("\n", $cmd);
 <table>
 		<thead>
 			<tr>
-				<th>Usuarios :</th>
+				<th><h2>Grupo de usuários: </h2></th>
 			</tr>
 		</thead>
 		<tbody>

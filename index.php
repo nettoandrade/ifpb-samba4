@@ -1,6 +1,6 @@
 <?
- include 'check.php';
- include 'connection.php';
+ include 'sessao/check.php';
+ include 'sessao/connection.php';
  $page = (isset($_GET['page']))?$_GET['page'].".php":"status.php";
 
 ?>
@@ -9,6 +9,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Samba 4</title>
+	<link rel="stylesheet" type="text/css" href="css/estilo2.css">
 	<link rel="stylesheet" href="css/estilo.css">
 	<link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
 	<script language="JavaScript" src="js/jquery-1.3.2.js" type="text/javascript"></script>
@@ -26,11 +27,14 @@
   	});
   </script>
 </head>
-<body>
-<header>
-<h1>SAMBA 4</h1>
-<h4>Controlador de dominio</h4>
-</header>
+
+<body style="background-color: #CFCFCF;">
+<div id="logo">
+	<header id="index">
+	<h1>SAMBA 4</h1>
+	<h4>Controlador de dominio</h4>
+	</header>
+</div>
 
 <div id="menu1">
 	<ul id="menu">
@@ -48,9 +52,12 @@
 	</li>
 	<li class="parent"><a href="#" title="">Grupos</a>
 		<ul class="sub-menu">
-			<li><a href="#gcreate" id="gcreate">Adicionar</a></li>	
+			<li><a href="#gcreate" id="gcreate">Criar</a></li>	
 			<li><a href="#gremove" id="gremove">Remover</a></li>
-			<li><a href="#glist" id="glist">Listar</a></li>
+			<li><a href="#glist" id="glist">Listar grupos</a></li>
+			<li><a href="#gmember" id="gmember">Adicionar membro</a></li>
+			<li><a href="#grmember" id="grmember">Remover membro</a></li>
+			<li><a href="#glmember" id="glmember">Listar membros</a></li>
 		</ul>
 	</li>
 	<li class="parent"><a href="#" title="">Compartilhamentos</a>
@@ -88,6 +95,10 @@
 	$('#glist').click(function(){window.location='index.php?page=glist'});
 	$('#gcreate').click(function(){window.location='index.php?page=gcreate'});
 	$('#gremove').click(function(){window.location='index.php?page=gremove'});
+	$('#glist').click(function(){window.location='index.php?page=glist'});
+	$('#gmember').click(function(){window.location='index.php?page=gmember'});
+	$('#grmember').click(function(){window.location='index.php?page=grmember'});
+	$('#glmember').click(function(){window.location='index.php?page=glmember'});
 	$('#logs').click(function(){window.location='index.php?page=logs'});
 	</script>
 </body>

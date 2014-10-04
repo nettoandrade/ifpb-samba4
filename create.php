@@ -1,12 +1,12 @@
 <?php 
-include 'check.php';
-include 'connection.php';
+include 'sessao/check.php';
+include 'sessao/connection.php';
 ?>
 <form action="processo.php?page=create" method="POST">
 <h4>Nome: </h4>
-<input type="text" name="name" placeholder="Nome">
+<input type="text" name="name" placeholder="Nome" id="name">
 <h4>Senha: </h4>
-<input type="password" name="password" placeholder="Senha"><br>
+<input type="password" name="password" placeholder="Senha" id="password"><br>
 <input type="submit" value="Enviar">
 <input type="reset" value="Limpar">
 </form>
