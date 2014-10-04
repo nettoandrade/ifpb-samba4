@@ -25,7 +25,7 @@ $cmd = explode("\n", $cmd);
 
 <?php
 	$nomeGrupo = $_POST['grupo'];
-	$output2 =  ssh2_exec($connection, '/usr/local/samba/bin/samba-tool group listmembers'.$nomeGrupo);
+	$output2 =  ssh2_exec($connection, '/usr/local/samba/bin/samba-tool group listmembers '.$nomeGrupo);
 	stream_set_blocking($output2, true);
 	$cmd2 = stream_get_contents($output2);
 	$cmd2 = explode("\n", $cmd2);
