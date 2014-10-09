@@ -46,7 +46,7 @@ extract($_POST);
 				break;
 
 		case 'grmember':
-				ssh2_exec($connection, '/usr/local/samba/bin/samba-tool group removemembers'.$group.' '.$name);
+				ssh2_exec($connection, '/usr/local/samba/bin/samba-tool group removemembers '.$group.' '.$name);
 				header('Location:index.php?page=glmember');
 				break;
 		

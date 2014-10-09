@@ -2,7 +2,7 @@
 include 'sessao/check.php';
 include 'sessao/connection.php';
 ?>
-<form action="processo.php?page=gremove" method="POST">
+<form action="index.php?page=gremove" method="POST">
 <h4>Nome: </h4>
 <input type="text" name="group" id="group" placeholder="Grupo">
 <input type="submit" value="Enviar">
